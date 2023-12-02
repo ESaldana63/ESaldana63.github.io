@@ -1,0 +1,63 @@
+*{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+#header{
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+#myForm {
+    display: grid;
+    padding: 1em;
+    grid-gap: 10px;
+    background: #f9f9f9;
+    border: 1px solid #c1c1c1;
+    margin: 2rem auto 0 auto;
+    max-width: 600px;
+ }
+
+#results{
+    display: grid;
+    max-width: 600px;
+    background: yellow;
+    justify-items: center;
+}
+table, th{
+    border: 1px solid black;
+}
+@media (min-width: 800px) {
+    #myForm {
+        grid-template-columns: 200px 1fr;
+        grid-gap: 15px;
+    }
+    #myForm > input{
+        vertical-align: middle;
+        margin: 0;
+        grid-column: 2 / 3;
+        position: relative;
+}
+    #header {
+        grid-column: span 2;
+    }
+    #delSpeed{
+        grid-column: 2/2;
+    }
+    label {
+        text-align: right;
+        grid-column: 1 / 2;
+    }
+    #results {
+        font-size: 20px;
+        grid-column: span 2;
+    }
+
+    button {
+        grid-column: 2 / 3;
+        position: relative;
+        top: 5px;
+    }
+
+}

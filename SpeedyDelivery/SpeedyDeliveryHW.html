@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Speedy Delivery</title>
+    <link rel="stylesheet" href="css/speedyMainHW.css" />
+    <script src="js/speedyForm.js"></script>
+</head>
+<body onload="updatePage()">
+    <form id='myForm' name = "myForm" method="post">
+        <h2 id="header">Speedy Delivery Order Form</h2>
+        <label for="delSpeed"> Speed Of Delivery: </label>
+            <div id="delSpeed">
+            </div>
+        <label for="packSize"> Package Size: </label>
+            <select id="packSize" size="3">
+            </select>
+        <label for="dest">Destination: </label>
+            <select id="dest" size="3">
+            </select>
+        <label for="options"> Options: </label>
+            <div id="options">
+            </div>
+        <input id="button" type="button" onclick="createQuote();" value="Create Quote"/>
+        <div id="results" class="formElem resultArea"></div>
+    </form>
+
+</body>
+</html>

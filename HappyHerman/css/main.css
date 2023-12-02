@@ -1,0 +1,324 @@
+*{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "nav article ads";
+    grid-template-rows: 200px 1fr;
+    grid-template-columns: 25% 50% 25% ;
+    height: 100vh;
+    margin: 0;
+}
+#pageHeader {
+    grid-area: header;
+}
+#pageFooter {
+    grid-area: footer;
+}
+#mainArticle {
+    grid-area: article;
+}
+#mainNav {
+    grid-area: nav;
+}
+#siteAds {
+    grid-area: ads;
+}
+header{
+    display: grid;
+    grid-template-columns: 45% 56%;
+    background: #0085AA;
+}
+#logo{
+    position: relative;
+    left: 70%;
+    padding-top: 1em;
+    height: 175px;
+}
+#logoTitle {
+    position: relative;
+    text-align: initial;
+    padding-top: 1.5em;
+    font-size: 2em;
+    color: #F7D7D2;
+}
+nav{
+    background:#00ADB7;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-template-rows:125px 100px ;
+    grid-gap: 2px;
+    align-items: center;
+}
+#grandpa{
+    height:120px;
+    position: initial;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+#contactUs{
+    font-size: 1.25em;
+    position: initial;
+    text-align: left;
+    color: #F7D7D2;
+    grid-column: 2/2;
+    grid-row: 1/2;
+    margin-bottom: 50px;
+}
+#info{;
+    font-size: 0.9em;
+    padding-top: 40px;
+    grid-column: 2/2;
+    grid-row: 1/2;
+}
+#sold{
+    height: 95px;
+    margin-top: 90px;
+    margin-left: 110px;
+}
+article{
+    background: #F7D7D2;
+}
+#loanTitle{
+    display: grid;
+    grid-template-columns: 100%;
+    text-align: center;
+    position: relative;
+    font-size: 1.25em;
+    font-weight: bold;
+    top: 35px;
+}
+form {
+    display: grid;
+    padding: 1em;
+    background: #F7D7D2;
+    border: 1px solid #F7D7D2;
+    margin-top: 2em;
+    max-width: 1000px;
+    grid-template-columns: 1fr 400px;
+    grid-template-rows: repeat(3,30px) 1fr;
+    grid-gap: 5px;
+}
+form input {
+    background: #fff;
+    border: 1px solid black;
+    height: 15%;
+}
+form button {
+    background: lightgrey;
+    padding: 0.7em;
+    border: 0;
+    grid-column: span 2;
+    margin-bottom: 15px;
+}
+form button:hover {
+    background: gold;
+}
+label {
+    padding-right: 5px;
+    text-align: right;
+}
+input {
+    padding:0.7em;
+    width: 100%;
+}
+input:focus {
+    outline: 3px solid black;
+}
+#results{
+    display: grid;
+    grid-column:span 2;
+    background-color: yellow;
+}
+#results >div > img{
+    height: 125px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 15px;
+    float: left;
+}
+#results > div{
+    font-size: 1.25em;
+    padding-top: 10px;
+    float: right;
+}
+#results > span{
+    color: red;
+    padding-bottom: 15px;
+}
+#siteAds{
+    justify-content: center;
+    background: #00ADB7;
+}
+#family{
+    height: 150px;
+    position: relative;
+    left: 35%;
+    top: 20%
+}
+#famTitle{
+    font-weight: bold;
+    font-size: 1.25em;
+    position: relative;
+    float: left;
+    left: 55px;
+    top: 25px;
+}
+
+@media screen and (max-width: 1200px) {
+    #logoTitle{
+    }
+    nav{
+        grid-template-columns: 100px 1fr;
+    }
+    #grandpa{
+        height:95px;
+    }
+    #contactUs{
+        font-size: 1em;
+    }
+    #info{
+        font-size: .75em;
+        margin-right: 15px;
+    }
+    #sold{
+        height: 85px;
+    }
+    form {
+        grid-template-columns: 1fr 300px;
+        grid-template-rows: repeat(3,25px) 1fr;
+        grid-gap: 10px;
+    }
+    label{
+        font-size: 0.85em;
+    }
+    #famTitle{
+        background-color: purple;
+        font-size: 0.85em;
+        left: 45px;
+    }
+    #family{
+        left: 30%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    body {
+        display: grid;
+        grid-template-areas:
+        "header"
+        "nav"
+        "article"
+        "ads";
+        grid-template-rows: 18% 23% 1fr 20% ;
+        grid-template-columns: 100% ;
+        margin: 0;
+    }
+    header{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+    }
+    #logo{
+        height: 115px;
+        padding-top: 15px;
+        margin-bottom: 15px;
+    }
+    #logoTitle{
+        float: right;
+        text-align: center;
+        font-size: 1.5em;
+        padding-top: 0;
+    }
+    nav{
+        grid-template-columns: 50% 50%;
+        grid-template-rows:75px 75px ;
+        grid-column-gap: 15px;
+    }
+    #grandpa{
+        height: 75px;
+        grid-column: 1/2;
+        padding-left: 75%;
+    }
+    #contactUs{
+        grid-column: 2/2;
+        padding-top: 15px;
+    }
+    #info{
+        grid-column: 2/2;
+    }
+    #sold{
+        height: 60px;
+        grid-column: 1/2;
+        grid-row: 2/2;
+        margin-top: 0px;
+        padding-left: 70%;
+    }
+    #loanTitle{
+        position: relative;
+        text-align: center;
+        font-size: 1em;
+        top: 5%;
+    }
+    form {
+        display: grid;
+        text-align: center;
+        justify-content: center;
+        padding: 0.9em 1em;
+        background: #F7D7D2;
+        border: 1px solid #F7D7D2;
+        margin-top: 0;
+        margin-left: 100px;
+        max-width: 1000px;
+        grid-template-columns: 35% 55%;
+        grid-template-rows: repeat(4,25px);
+        grid-gap: 6px;
+    }
+    input{
+        padding: 0.6em;
+    }
+    form button{
+        padding: 0;
+        text-align: center;
+        font-size: 0.8em;
+        height: 90%;
+    }
+    #results >div > img{
+        height: 70px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 5px;
+        float: left;
+    }
+    #results > div{
+        font-size: 0.95em;
+        padding-top: 5px;
+        float: left;
+    }
+    #results > span{
+        color: red;
+        padding-bottom: 0px;
+        font-size: 0.85em;
+    }
+    #siteAds{
+        display: grid;
+        grid-template-rows: 20px 60%;
+        text-align: center;
+        justify-content: center;
+    }
+    #famTitle{
+        background-color: yellow;
+        top: 5px;
+    }
+    #family{
+        height: 100px;
+        padding-bottom: 5px;
+        padding-left: 100px;
+        left:0;
+    }
+}
